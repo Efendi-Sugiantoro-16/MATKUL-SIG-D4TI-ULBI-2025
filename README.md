@@ -32,16 +32,35 @@ Tujuan dari pembuatan data ini adalah untuk:
 
 ---
 
-## 🧱 Struktur File GeoJSON
-File ini menggunakan format **GeoJSON** dengan struktur utama:
+## 📂 Struktur Dasar GEOJSON
+Berikut adalah contoh struktur dasar GEOJSON yang digunakan dalam proyek ini:
 
 ```json
 {
   "type": "FeatureCollection",
   "features": [
-    { "type": "Feature", "properties": { ... }, "geometry": { ... } }
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nama Jalan"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [longitude1, latitude1],
+          [longitude2, latitude2]
+        ]
+      }
+    }
   ]
 }
 ```
+##Penjelasan elemen:
 
+type → menentukan jenis data (FeatureCollection atau Feature)
 
+properties → menyimpan informasi tambahan seperti nama jalan
+
+geometry → berisi tipe geometri dan koordinat lokasi
+
+coordinates → berisi pasangan nilai [longitude, latitude]
