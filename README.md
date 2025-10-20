@@ -130,18 +130,6 @@ Tampilan di geojson.io menampilkan:
 
 ---
 
-## 📁 Struktur Repository GitHub
-
-```
-📦 geojson-praktek-ulbi
-├── README.md
-├── jalan_ulbi2.geojson
-└── assets/
-    └── hasil-geojson.png  (opsional)
-```
-
----
-
 ## 🧠 Kesimpulan
 
 * GEOJSON memudahkan penyimpanan dan pertukaran data spasial berbasis web.
