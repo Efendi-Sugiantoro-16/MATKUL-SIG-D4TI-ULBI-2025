@@ -41,5 +41,6 @@ File ini menggunakan format **GeoJSON** dengan struktur utama:
     { "type": "Feature", "properties": { ... }, "geometry": { ... } }
   ]
 }
+```
 
 
