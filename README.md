@@ -55,12 +55,131 @@ Berikut adalah contoh struktur dasar GEOJSON yang digunakan dalam proyek ini:
   ]
 }
 ```
-##Penjelasan elemen:
+Penjelasan elemen:
 
-type → menentukan jenis data (FeatureCollection atau Feature)
+* **type** → menentukan jenis data (`FeatureCollection` atau `Feature`)
+* **properties** → menyimpan informasi tambahan seperti nama jalan
+* **geometry** → berisi tipe geometri dan koordinat lokasi
+* **coordinates** → berisi pasangan nilai `[longitude, latitude]`
 
-properties → menyimpan informasi tambahan seperti nama jalan
+---
 
-geometry → berisi tipe geometri dan koordinat lokasi
+## 🗺️ Data GEOJSON Saya
 
-coordinates → berisi pasangan nilai [longitude, latitude]
+Berikut isi file GEOJSON yang telah saya buat:
+
+```json
+{
+  "type": "Feature",
+  "properties": {
+    "name": "Segmen ULBI 2"
+  },
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [107.5757583361837, -6.8739466464968615],
+      [107.57571092906232, -6.8742618270786835]
+    ]
+  }
+}
+```
+
+### 📍 Informasi Detail
+
+| Atribut               | Nilai                                                                             |
+| --------------------- | --------------------------------------------------------------------------------- |
+| **Nama Jalan**        | Segmen ULBI 2                                                                     |
+| **Lokasi**            | Sekitar Kampus Universitas Logistik dan Bisnis Internasional (ULBI), Kota Bandung |
+| **Tipe Geometri**     | LineString                                                                        |
+| **Koordinat Titik 1** | (107.5757583361837, -6.8739466464968615)                                          |
+| **Koordinat Titik 2** | (107.57571092906232, -6.8742618270786835)                                         |
+| **Sistem Koordinat**  | EPSG:4326 (WGS84)                                                                 |
+
+---
+
+## ✅ Validasi dan Pengujian
+
+File GEOJSON telah diuji menggunakan situs **[geojson.io](https://geojson.io)** dengan hasil sebagai berikut:
+
+* ✅ **File berhasil dimuat tanpa error.**
+* ✅ **Garis (LineString)** muncul jelas di peta pada area Kampus ULBI Bandung.
+* ✅ Properti `name` ditampilkan dengan benar pada tampilan peta.
+
+---
+
+## 🧩 Cara Uji Sendiri di geojson.io
+
+1. Buka situs [https://geojson.io](https://geojson.io)
+2. Klik menu **Open → File**
+3. Pilih file `jalan_ulbi2.geojson` (atau nama file kamu)
+4. Pastikan garis muncul di peta dan nama properti terlihat di sisi kanan
+
+Jika garis muncul tanpa error, berarti file GEOJSON kamu **benar secara sintaks dan semantik** ✅
+
+---
+
+## 📸 Hasil Visualisasi
+
+Tampilan di geojson.io menampilkan:
+
+* Garis pendek (segmen jalan) di sekitar **Universitas Logistik dan Bisnis Internasional (ULBI)**
+* Peta dasar (base map) menampilkan area Kota Bandung
+* Informasi properti `name: "Segmen ULBI 2"` muncul saat fitur diklik
+
+> *(Tambahkan screenshot peta di sini jika tersedia, misalnya `assets/hasil-geojson.png`)*
+
+---
+
+## 📁 Struktur Repository GitHub
+
+```
+📦 geojson-praktek-ulbi
+├── README.md
+├── jalan_ulbi2.geojson
+└── assets/
+    └── hasil-geojson.png  (opsional)
+```
+
+---
+
+## 🧠 Kesimpulan
+
+* GEOJSON memudahkan penyimpanan dan pertukaran data spasial berbasis web.
+* Tipe **LineString** digunakan untuk memetakan objek berbentuk garis seperti jalan, sungai, atau batas wilayah.
+* Data yang dibuat berhasil divisualisasikan tanpa kesalahan, menandakan pemahaman yang baik terhadap format GEOJSON.
+
+---
+
+## 🏫 Informasi Pembuat
+
+| Keterangan         | Data                                                 |
+| ------------------ | ---------------------------------------------------- |
+| **Nama**           | Efendi Sugiantoro                                    |
+| **Mata Kuliah**    | Sistem Informasi Geografis (SIG)                     |
+| **Institusi**      | Universitas Logistik dan Bisnis Internasional (ULBI) |
+| **Dosen Pengampu** | *(Isi sesuai nama dosen pengajar)*                   |
+| **Tahun Akademik** | 2025                                                 |
+
+---
+
+## 💬 Catatan Tambahan
+
+Setiap segmen jalan memiliki nilai **5 poin**.
+Tugas ini mengerjakan **1 jalan (Segmen ULBI 2)** dengan total **5 poin dari maksimal 30 poin**.
+
+---
+
+## 🔗 Referensi
+
+* [geojson.io](https://geojson.io) – alat untuk membuat dan memverifikasi data GeoJSON
+* [GeoJSON Specification (RFC 7946)](https://datatracker.ietf.org/doc/html/rfc7946)
+* [QGIS Documentation](https://docs.qgis.org/latest/en/docs/) – perangkat lunak open-source GIS
+
+---
+
+### ✨ Lisensi
+
+Dokumen ini bersifat terbuka untuk keperluan pembelajaran SIG.
+© 2025 Efendi Sugiantoro – Universitas Logistik dan Bisnis Internasional (ULBI)
+
+```
