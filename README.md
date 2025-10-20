@@ -28,6 +28,7 @@ Tujuan dari pembuatan data ini adalah untuk:
 - **Provinsi:** Jawa Barat  
 - **Koordinat Pusat:** 107.576° BT, -6.874° LS  
 - **Wilayah Sekitar:** Politeknik Negeri Bandung (Polban), Pusdilat Pos, Pasar Sarijadi, dan ULBI.  
+<img width="1411" height="901" alt="image" src="https://github.com/user-attachments/assets/ea67ec29-3c12-48d1-ac34-4916967c7d43" />
 
 ---
 
